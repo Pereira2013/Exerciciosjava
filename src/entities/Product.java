@@ -9,11 +9,24 @@ public class Product {
     return price * quantity;
   }
 
-  public void addProduct(int quantity) {
+  public void addProducts(int quantity) {
     this.quantity += quantity;  // o this para referir ao atributo da classe, não com o parametro do método
   }
 
   public void removeProduct(int quantity) {
     this.quantity -= quantity;
   }
+
+  public  String toString(){
+    return name
+            + ", $ "
+            + String.format("%.2f", price)
+            + ", "
+            + quantity
+            + " units, Total: $ "
+            + String.format("%.2f", totalValueStock());
+  }
+
 }
+
+
