@@ -4,6 +4,12 @@ public class Product {
   public String name;
   public double price;
   public int quantity;
+  // criado construtor para não iniciar vazio o nome, price e quantity
+  public  Product(String name, double price, int quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+  }
 
   public double totalValueStock() {
     return price * quantity;
