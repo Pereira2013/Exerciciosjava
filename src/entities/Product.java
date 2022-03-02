@@ -4,11 +4,23 @@ public class Product {
   public String name;
   public double price;
   public int quantity;
+
+  //construtor padrão
+
+  public  Product(){}
+
   // criado construtor para não iniciar vazio o nome, price e quantity
+
   public  Product(String name, double price, int quantity) {
     this.name = name;
     this.price = price;
     this.quantity = quantity;
+  }
+    //sobrecarga
+
+  public Product(String name, double price) {
+    this.name = name;
+    this.price = price;
   }
 
   public double totalValueStock() {
